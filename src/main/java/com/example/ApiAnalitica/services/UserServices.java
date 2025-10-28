@@ -16,8 +16,8 @@ public class UserServices {
     //guardar
     public boolean saveUser(User user) throws Exception {
         try {
-
-            this.repository.save(user);
+            User saved = this.repository.save(user);
+            System.out.println("DEBUG: saved.getId() = " + saved.getId());
             return true;
 
         } catch (Exception error) {
